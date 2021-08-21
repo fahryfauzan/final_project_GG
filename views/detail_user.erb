@@ -1,0 +1,17 @@
+<body>
+<center>
+<a href="#">Profile</a>&nbsp; &nbsp; &nbsp; &nbsp;
+<% users.each do |user| %>
+    <a href="/post/<%= user.id%>">All Post</a>&nbsp; &nbsp; &nbsp; &nbsp;
+<% end %>
+<a href="#">Trending</a>
+<% users.each do |user| %>
+    <h1>Welcome <%= user.username%></h1>  
+    <h3>Username : <%= user.username%></h3>
+    <h3>Email : <%= user.email%></h3>
+    <h3>Bio : <%= user.bio%></h3>
+    <a href="/user/edit/<%= user.id%>">Edit Profile</a><br>
+    <a href="/">Logout</a>
+<% end %>
+</center>
+</body>

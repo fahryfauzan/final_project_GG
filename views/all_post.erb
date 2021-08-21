@@ -1,0 +1,27 @@
+<body>
+<center>
+<% postid.each do |pstid| %>
+    <a href="/user/detail/<%= pstid.user.id%>">Profile</a>&nbsp; &nbsp; &nbsp; &nbsp;
+<% end %>
+<a href="#">All Post</a>&nbsp; &nbsp; &nbsp; &nbsp;
+<a href="#">Trending</a>
+<h1>Posts</h1>
+<table>
+<% postid.each do |pstid| %>
+    <a href="/post/addPost/<%= pstid.user.id%>">Add Posts</a>
+<% end %>
+ <% post.each do |pst| %>
+    <thead>
+        <tr>
+        <th><%= pst.user.username%></th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td><%= pst.post%></td>
+            </tr>
+    <tbody>
+    <% end %>
+</table><br><br>
+</center>
+</body>

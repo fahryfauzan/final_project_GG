@@ -1,0 +1,20 @@
+<body>
+<center>
+<h1>Welcome to our Social Media</h1>
+<table>
+<a href="/users/addUser">Add User</a>
+    <thead>
+        <tr>
+        <th>Select Account</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% users.each do |user| %>
+            <tr>
+                <td><a href="/user/detail/<%= user.id %>"><%= user.username%></td></a>
+            </tr>
+        <% end %>
+    <tbody>
+</table><br><br>
+</center>
+</body>
