@@ -1,1 +1,1 @@
-# final_project_GG
+# Generasi Gigih Final Project
